@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>js练习</title>
+</head>
+<body>
+    <script>
+        var text = "";
+        function message(){
+            try{
+                adddlert("Welcome guest!");
+            }catch (err){
+                text="本页有一个错误.\n\n";
+                text+="错误描述："+err.message+"\n\n";
+                text+="点击确定继续。\n\n";
+                alert(text);
+            }
+        }
+    </script>
+    <input type="button" value="查看消息" onclick="message()" />
+</body>
+</html>
