@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>js更改Html的样式</title>
+</head>
+<style>
+    #p {
+        color: aqua;
+    }
+
+    #btn {
+        color: blueviolet;
+    }
+
+</style>
+<body>
+    <p id="p"> js更改html的样式 </p>
+    <button id="btn" onclick="aaa()">点击这里</button>
+    <script>
+
+        document.getElementById("p").style.color = "red";
+
+        function aaa()
+        {
+            document.getElementById("btn").style.color = "red";
+        }
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,8 @@
+.idea
+.idea/*
+.sass-cache
+.sass-cache/*
+node_modules/*
+gulpfile.js
+*/.DS_Store
+html/test.html

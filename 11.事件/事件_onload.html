@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>js练习--事件onload</title>
+</head>
+
+<body onload="checkCookies()">
+
+<script>
+    function checkCookies()
+    {
+        if(navigator.cookieEnabled){
+            alert("已启用cookie")
+        }else {
+            alert("未启动cookie")
+        }
+    }
+</script>
+<p>提示框会告诉你,浏览器是否已启用 cookie</p>
+<p>onload 事件会在用户进入页面时触发</p>
+</body>
+</html>

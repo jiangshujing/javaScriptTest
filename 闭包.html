@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>js练习</title>
+    <!--<script>-->
+        <!--function aaa(){-->
+            <!--document.getElementById("demo").innerHTML = "my first javaScript fumction"// 修改id为demo元素内的内容-->
+        <!--}-->
+    <!--</script>-->
+</head>
+<body>
+
+    <script>
+        function f1(){
+            var n=999;
+            nAdd=function(){n+=1}//在nAdd前面没有使用var关键字，因此 nAdd是一个全局变量，而不是局部变量
+            function f2(){
+                alert(n);
+            }
+            return f2;
+        }
+        var result=f1();
+        result(); // 999
+        nAdd();//调用nAdd方法 n+1
+        result(); // 1000
+    </script>
+</body>
+</html>

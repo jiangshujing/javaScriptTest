@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>js练习</title>
+</head>
+<body>
+<button type="button" onclick="myOnclick()">点击遍历对象中的属性</button>
+<script>
+
+    var text = "";
+    var x;
+    person = {firstname:"Bill",lastname : "Gates",age:56,eyecolor:"blue"};
+
+    function myOnclick(){
+        for(x in person){
+            text = person[x];
+            document.write(x+":"+text+";");
+        }
+    }
+
+</script>
+</body>
+</html>

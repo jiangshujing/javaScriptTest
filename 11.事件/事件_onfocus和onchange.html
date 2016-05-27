@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>js练习--事件onfocus 和 onchange </title>
+</head>
+
+<body onload="checkCookies()">
+
+请输入英文字符：<input type="text" id="text" onfocus="myOnfocus(this)"onchange="myFunction()">
+    <script>
+        //当焦点移开输入框时,将输入的小写转换为大写
+        function myFunction()
+        {
+            var text = document.getElementById("text");
+            text.value=text.value.toUpperCase();
+        }
+
+        //当输入框获取焦点时文本框变色
+//        function myOnfocus(){
+//            document.getElementById("text").style.backgroundColor = "yellow";
+//        }
+
+        //也可以使用带参数的方法
+        function myOnfocus(object){
+            object.style.backgroundColor = "yellow";
+        }
+    </script>
+
+<p>当您离开输入字段时，会触发将输入文本转换为大写的函数。</p>
+
+</body>
+</html>

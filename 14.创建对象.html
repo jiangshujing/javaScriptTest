@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>js练习</title>
+</head>
+<body>
+<script>
+    //方法1
+//    person = new Object();
+//    person.firstname = "Bill";
+//    person.lastname = "Gates";
+//    person.age = 56;
+//    person.eyecolor = "blue";
+
+    //方法2
+//    person = {firstname:"Bill",lastname : "Gates",age:56,eyecolor:"blue"};
+
+    //方法3
+    function person(firstname,lastname,age,eyecolor){
+        this.firstname = firstname;
+        this.lastname = lastname;
+        this.age = age;
+        this.eyecolor = eyecolor;
+
+        this.changeName=changeName;
+        //类中的方法
+        function changeName(name)
+        {
+            this.lastname=name;
+        }
+
+
+    }
+
+    person = new person("Bill","Gates",56,"blue");
+    person.changeName("Ballmer");//调用类中的方法
+    document.write(person.lastname + "is" + person.age + " years old.");
+
+
+</script>
+</body>
+</html>

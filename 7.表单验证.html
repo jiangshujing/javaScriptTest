@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>js练习-检查用户是否已填写表单中的必填（或必选）</title>
+</head>
+<body>
+<script>
+    function validate_required(field, alerttxt) {
+        with (field) {
+            if (value == null || value == "") {
+                alert(alerttxt);
+                return false;
+            } else {
+                return true;
+            }
+        }
+    }
+
+    function validate_form(thisform) {
+        if (validate_required(thisform.email, "Email must be filled out!") == false) {
+            thisform.email.focus();
+            return false;
+        }
+    }
+</script>
+<form action="submitpage.htm" onsubmit="return validate_form(this)" method="post">
+    Email:<input type="text" name="email" size="30">
+    <input type="submit" value="Submit">
+</form>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>js练习--事件onmouseover和onmouseout</title>
+</head>
+
+<body>
+    <div id="text" onmouseover="myOnmouseover()" onmouseout="myOnmouseout()">
+        把鼠标移到上面
+    </div>
+    <script>
+        var text = document.getElementById("text");
+        function myOnmouseover()
+        {
+            text.innerHTML = "谢谢";
+        }
+        function myOnmouseout()
+        {
+            text.innerHTML = "把鼠标移到上面";
+        }
+
+
+    </script>
+</body>
+</html>
